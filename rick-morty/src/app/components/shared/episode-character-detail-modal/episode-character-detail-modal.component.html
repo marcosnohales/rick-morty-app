@@ -1,0 +1,21 @@
+<div class="detail__container">
+    <div class="button__container">
+        <div class="detail__header">
+            <div class="detail__header--txt">Personajes</div>
+        </div>
+        <p-button
+        size='small' icon="pi pi-times" [rounded]="true" [text]="true" severity="danger" [raised]="true" (click)="close()"/>
+    </div>
+    <p-carousel [value]="characters" [numVisible]="3" [numScroll]="3" [circular]="true">
+        <ng-template let-character #item>
+            <div class="border border-surface rounded-border m-2 p-4">
+                <div class="mb-4">
+                    <div class="relative mx-auto">
+                        <img src="{{ character.image }}" [alt]="character.name" class="w-full rounded-border" />
+                    </div>
+                </div>
+                <div class="mb-4 font-medium">{{ character.name }}</div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>

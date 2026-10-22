@@ -1,0 +1,27 @@
+@if (character) {
+  <div class="char__card">
+        <div class="char__card__header">
+            <img [src]="character.image" (error)="handleImageError($event)" alt="{{ character.name }}" class="char__card__header--img"/>
+        </div>
+        <div class="char__card__content">
+            <div class="char__card__content--title">{{ character.name }}</div>
+            <div class="char__card__content--details">
+                <div class="char__card__content--details--genre">
+                    Género: {{character.gender}}
+                </div>
+                <div class="char__card__content--details--species">
+                    Especie: {{character.species}}
+                </div>
+                <div class="char__card__content--details--status">
+                    Estado: {{character.status}}
+                </div>
+            </div>
+        </div>
+        <div class="char__card__footer">
+            <div class="char__card__footer--btn" (click)="showDetails(character.id)">
+                Detalles
+            </div>
+        </div>
+      </div>
+}  
+

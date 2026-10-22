@@ -1,0 +1,84 @@
+.filter__search {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .search__container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1%;
+        margin-bottom: 2%;
+        .search__input {
+            height: 30px;
+            width: 15%;
+            &--input {
+                height: 30px;
+                width: 100%;
+                border-radius: 0.25rem;
+                border: 1px solid #64748b;
+                &:focus-visible {
+                    outline: none;
+                    border-color: #daa2db;
+                    box-shadow: -1px 3px 18px -1px rgb(218, 162, 219);
+                }
+            }
+        }
+        .search__button__container {
+            width: 5%;
+            display: flex;
+            .search__button--btn {
+                cursor: pointer;
+                width: 100%;
+                border-radius: 0.35rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #daa2db;
+    
+                &--text {
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                }
+            }
+        }
+    }
+}
+
+
+
+.show__btn {
+    display: flex;
+    height: 11%;
+    &--btn {
+        width: 106px;
+        padding: 1%;
+        height: 66%;
+        border-radius: 25px;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        border: none;
+        background-color: #daa2db;
+        display: flex;
+        justify-content: center;
+        align-items: anchor-center;
+        cursor: pointer;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+.error__on__search {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &--img {
+        width: 30%;
+    }
+    &--txt {
+        font-family: 'Roboto', sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        color: #F1532C;
+    }
+}

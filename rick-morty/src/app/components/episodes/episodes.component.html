@@ -1,0 +1,51 @@
+
+<div class="filter__search">
+    <div class="search__container">
+        <div class="search__input">
+            <input [(ngModel)]="name" class="search__input--input" type="text" placeholder="Buscar" />
+        </div>
+        <div class="search__button__container">
+            <div class="search__button--btn" (click)="searchEpisodes()">
+                <div class="search__button--btn--text">Buscar</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Si existen los episodios en el archivo de lógica mostrame 
+ el html que hay dentro del @if -->
+<!-- @if (episodes) es lo mismo que @if (episodes != null) -->
+@if (episodes) {
+    <p-table [value]="episodes!" stripedRows [tableStyle]="{'min-width': '50rem'}">
+        <ng-template #header>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Código</th>
+                <th>Lanzamiento</th>
+                <th>Personajes</th>
+            </tr>
+        </ng-template>
+        <ng-template #body let-episode>
+            <tr>
+                <td>{{episode.id}}</td>
+                <td>{{episode.name}}</td>
+                <td>{{episode.episode}}</td>
+                <td>{{episode.air_date}}</td>
+                <td class="show__btn">
+                    <div class="show__btn--btn" (click)="openCharactersModal(episode.characters)">Mostrar</div>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+    <p-paginator 
+    (onPageChange)="onPageChange($event)"
+     [rows]="rows"
+     [totalRecords]="totalRecords"/>
+}
+
+@if(errorOnSearch) {
+    <div class="error__on__search">
+        <img class="error__on__search--img" [src]="getImage()"/>
+        <div class="error__on__search--txt">Sin Resultados</div>
+    </div>
+}

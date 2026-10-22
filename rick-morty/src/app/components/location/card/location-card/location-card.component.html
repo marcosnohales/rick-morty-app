@@ -1,0 +1,30 @@
+<div class="location__card__container">
+    @if (location) {
+    <div class="information__section">
+        <div class="title__container">
+            <div class="title__label">Nombre:</div>
+            <div class="title__info">{{location.name}}</div>
+        </div>
+        <div class="created__container">
+            <div class="created__label">Creación:</div>
+            <div class="created__info">{{location.created}}</div>
+        </div>
+        <div class="dimension__container">
+            <div class="dimension__label">Dimensión:</div>
+            <div class="dimension__info">{{location.dimension}}</div>
+        </div>
+        <div class="type__container">
+            <div class="type__label">Tipo:</div>
+            <div class="type__info">{{location.type}}</div>
+        </div>
+    </div>
+    <div class="gallery__section">
+        <div class="gallery__title">Residentes:</div>
+        <div class="gallery__imgs">
+            @for (image of images; track $index) {
+                <img [src]="image" class="gallery__imgs--img"/>
+            }            
+        </div>
+    </div>
+    }
+</div>

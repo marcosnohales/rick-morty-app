@@ -1,0 +1,96 @@
+.location__card__container {
+    border: 1px solid;
+    margin: 38px 40px 10px 40px;
+    display: flex;
+    gap: 10px;
+    padding: 10px 10px;
+    border-radius: 0.25rem;
+    box-shadow: 2px 14px 18px 4px rgba(0, 0, 0, 0.46);
+    background-image: url('../../../../../assets/images/galaxy.jpg');
+    background-size: contain;
+
+    .information__section {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        width: 30%;
+        justify-content: center;
+        gap: 30px;
+        
+        .title__container {
+            display: flex;
+            gap: 3px;
+            width: fit-content;
+            justify-content: center;
+            border: 1px solid;
+            border-radius: 1.25rem;
+            padding: 10px;
+            background-color: #1DCD9F;
+            box-shadow:  -2px 3px 7px 3px rgba(211 205 205 / 46%);
+        }
+        .created__container {
+            display: flex;
+            gap: 3px;
+            width: fit-content;
+            justify-content: center;
+            border: 1px solid;
+            border-radius: 1.25rem;
+            padding: 10px;
+            background-color: #1DCD9F;
+            box-shadow:  -2px 3px 7px 3px rgba(211 205 205 / 46%);
+        }
+        .dimension__container {
+            display: flex;
+            gap: 3px;
+            width: fit-content;
+            justify-content: center;
+            border: 1px solid;
+            border-radius: 1.25rem;
+            padding: 10px;
+            background-color: #1DCD9F;
+            box-shadow:  -2px 3px 7px 3px rgba(211 205 205 / 46%);
+        }
+        .type__container {
+            display: flex;
+            gap: 3px;
+            width: fit-content;
+            justify-content: center;
+            border: 1px solid;
+            border-radius: 1.25rem;
+            padding: 10px;
+            background-color: #1DCD9F;
+            box-shadow:  -2px 3px 7px 3px rgba(211 205 205 / 46%);
+        }
+    }
+
+    .gallery__section {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 70%;
+        align-items: center;
+        gap: 10px;
+        .gallery__title {
+            display: flex;
+            justify-content: center;
+            border: 1px solid;
+            border-radius: 1.25rem;
+            padding: 10px;
+            background-color: #1DCD9F;
+            box-shadow:  -2px 3px 7px 3px rgba(211 205 205 / 46%);
+        }
+        .gallery__imgs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 74%;
+            height: fit-content;
+            max-height: 275px;
+            overflow-y: auto;
+            &--img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+}

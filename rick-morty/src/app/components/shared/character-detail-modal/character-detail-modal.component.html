@@ -1,0 +1,25 @@
+<div class="detail__container" *ngIf="character">
+    <div class="button__container">
+        <div class="detail__header">
+            <div class="detail__header--txt">Detalles</div>
+        </div>
+        <p-button
+        size='small' icon="pi pi-times" [rounded]="true" [text]="true" severity="danger" [raised]="true" (click)="close()"/>
+    </div>
+
+    <div class="detail__body">
+        <div class="left__box">
+            <img [src]="character.image" alt="{{ character.name }}" class="left__box--img"/>
+            
+        </div>
+        <div class="right__box">
+            <div class="char__detail">Nombre: {{character.name}}</div>
+            <div class="char__detail">Estado: {{character.status}}</div>
+            <div class="char__detail">Especie: {{character.species}}</div>
+            <div class="char__detail">Género: {{character.gender}}</div>
+            <div class="char__detail">Origen: {{character.origin.name}}</div>
+            <div class="char__detail">Ubicación: {{character.location.name}}</div>
+            <div class="char__detail">Cantidad de episodios: {{character.episode.length}}</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="filter__search">
+    <form [formGroup]="filterForm!"><!--etiqueta para formularios-->
+        <!--Caja de búsqueda por nombre-->
+        <div class="search__container">
+            <div class="search__container--box">
+                <div class="search__input">
+                    <input formControlName="name" type="text" class="search__input--input" placeholder="Buscar por nombre">
+                </div>
+                <div class="search__button__container">
+                    <div class="search__button--btn" (click)="searchCharacters()">
+                        <div class="search__button--btn--text">Buscar</div>
+                    </div>
+                    <small *ngIf="formIsEmpty" class="search__input--error">*Hay campos vacíos</small>
+                </div>
+            </div>
+        </div>
+
+        <!--Caja de filtros-->
+        <div class="filter__container">
+            <p-toggleswitch #toggleSwitch (onChange)="handleSwitchFilter()"/>
+            <div class="species__filter__input">
+                <input formControlName="species" class="species__filter__input--input" type="text" placeholder="Escribe una especie"/>
+                <small *ngIf="hasErrors('species')" class="species__filter__input--error">*Este campo no puede estar vacío</small>
+            </div>
+            <p-select formControlName="status" [options]="status" size="small" placeholder="Estados"/>
+            <p-select formControlName="gender" [options]="genders" size="small" placeholder="Género"/>
+            <div class="clean__button__container">
+                <div class="clean__button--btn" (click)="clearFormAndFilters()">
+                    <div class="clean__button--btn--text">Limpiar</div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div *ngIf="loadingCharacters" class="spinner--container">
+    <p-progress-spinner ariaLabel="loading" />
+</div>
+
+<div *ngIf="characters.length > 0" class="cards__container">
+    @for (character of characters; track character.id) {
+        <app-character-card 
+        [character]="character"
+        (onDetailClick)="showDetails($event)">
+        </app-character-card>
+      }
+  </div>
+  <p-paginator 
+  (onPageChange)="onPageChange($event)"
+   [rows]="rows"
+   [totalRecords]="totalRecords"/>
+
+   

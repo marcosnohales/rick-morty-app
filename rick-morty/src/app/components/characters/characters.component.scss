@@ -1,0 +1,122 @@
+
+.filter__search {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .search__container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1%;
+        margin-bottom: 2%;
+        &--box {
+            width: 50%;
+            display: flex;
+            gap: 3%;
+            justify-content: center;
+            .search__input {
+                height: 30px;
+                width: 29%;
+                &--input {
+                    height: 30px;
+                    width: 100%;
+                    border-radius: 0.25rem;
+                    border: 1px solid #64748b;
+                    &:focus-visible {
+                        outline: none;
+                        border: #daa2db;
+                        box-shadow: -1px 3px 18px -1px rgb(218, 162, 219);
+                    }
+                }
+            }
+
+            .search__button__container {
+                width: 31%;
+                display: flex;
+                gap: 6px;
+                .search__button--btn {
+                    cursor: pointer;
+                    width: 90px;
+                    border-radius: 0.35rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #daa2db;
+        
+                    &--text {
+                        color: white;
+                        font-family: 'Roboto', sans-serif;
+                    }
+                }
+                .search__input--error {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: #f33c3c;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+
+    .filter__container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1%;
+        margin-bottom: 2%;
+        height: 34px;
+        .species__filter__input {
+            width: 17%;
+            &--input {
+                height: 30px;
+                width: 100%;
+                border-radius: 0.25rem;
+                border: 1px solid #64748b;
+                &:focus-visible {
+                    outline: none;
+                    border-color: #daa2db;
+                    box-shadow: -1px 3px 18px -1px rgb(218, 162, 219);
+                }
+            }
+            &--error {
+                color: #f33c3c;
+                font-family: 'Roboto', sans-serif;
+                font-size: 11px;
+            }
+        }
+        .clean__button__container {
+            width: 5%;
+            display: flex;
+            .clean__button--btn {
+                cursor: pointer;
+                width: 100%;
+                border-radius: 0.35rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #daa2db;
+    
+                &--text {
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                }
+            }
+        }
+    }
+}
+
+.spinner--container {
+    display: flex;
+    justify-content: center;
+}
+.cards__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+
+
+}
+

@@ -1,0 +1,20 @@
+.detail__container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    .button__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 10px;
+    }
+    .detail__header {
+        &--txt {
+            font-size: 20px;
+            color: darkblue;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 2%;
+            text-align: center;
+        }
+    }
+}
